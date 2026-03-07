@@ -10,6 +10,7 @@ RULES="${NOTEPUB_RULES:-./.np/rules.yaml}"
 ART="./.notepub/artifacts"
 OUT="./.np/dist"
 CONTENT_DIR="./content"
+MEDIA_DIR="./media"
 
 if [[ -z "${NOTEPUB_BIN:-}" && -x "./.np/bin/notepub" ]]; then
   BIN="./.np/bin/notepub"
@@ -36,9 +37,10 @@ echo "[1/5] index/build"
 "$BIN" build --config "$CFG" --rules "$RULES" --artifacts "$ART" --dist "$OUT"
 
 echo "[2/5] export content media"
+rm -rf "$OUT/media"
+mkdir -p "$OUT/media"
+
 if [[ -d "$CONTENT_DIR" ]]; then
-  rm -rf "$OUT/media"
-  mkdir -p "$OUT/media"
   if command -v rsync >/dev/null 2>&1; then
     rsync -a --prune-empty-dirs \
       --exclude '.git/' \
@@ -49,6 +51,23 @@ if [[ -d "$CONTENT_DIR" ]]; then
   else
     find "$CONTENT_DIR" -type f ! -name '*.md' -print0 | while IFS= read -r -d '' f; do
       rel="${f#$CONTENT_DIR/}"
+      mkdir -p "$OUT/media/$(dirname "$rel")"
+      cp "$f" "$OUT/media/$rel"
+    done
+  fi
+fi
+
+if [[ -d "$MEDIA_DIR" ]]; then
+  if command -v rsync >/dev/null 2>&1; then
+    rsync -a --prune-empty-dirs \
+      --exclude '.git/' \
+      --exclude '.github/' \
+      --exclude '.obsidian/' \
+      --exclude '*.md' \
+      "$MEDIA_DIR"/ "$OUT/media/"
+  else
+    find "$MEDIA_DIR" -type f ! -name '*.md' -print0 | while IFS= read -r -d '' f; do
+      rel="${f#$MEDIA_DIR/}"
       mkdir -p "$OUT/media/$(dirname "$rel")"
       cp "$f" "$OUT/media/$rel"
     done

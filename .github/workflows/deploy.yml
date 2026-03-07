@@ -181,6 +181,14 @@ jobs:
             --exclude '.obsidian/' \
             --exclude '*.md' \
             ./content/ ./.np/dist/media/
+          if [ -d ./media ]; then
+            rsync -a --prune-empty-dirs \
+              --exclude '.git/' \
+              --exclude '.github/' \
+              --exclude '.obsidian/' \
+              --exclude '*.md' \
+              ./media/ ./.np/dist/media/
+          fi
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

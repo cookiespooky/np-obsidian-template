@@ -4,7 +4,7 @@
 1. `Use this template` в GitHub
 2. `git clone` себе на компьютер
 3. открыть папку как Obsidian Vault
-4. писать контент в `content/`
+4. писать контент в `content/` (медиа можно в `content/` или `media/`)
 5. пушить изменения, а сайт собирается через GitHub Actions и публикуется в GitHub Pages
 
 ## Структура
@@ -43,6 +43,6 @@ NOTEPUB_BIN=/path/to/notepub ./.np/scripts/build.sh
 
 ## Важно
 
-- Контент для пользователя хранится только в `content/`.
+- Контент пользователя хранится в `content/`; медиа можно хранить в `content/` или `media/`.
 - Технические файлы изолированы в `.np/`.
 - Workflow автоматически ставит корректный `base_url` для GitHub Pages.
