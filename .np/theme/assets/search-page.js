@@ -23,7 +23,7 @@
   }
 
   function updateURLQuery(q) {
-    var next = q ? withBasePath('/search?q=' + encodeURIComponent(q)) : withBasePath('/search');
+    var next = q ? withBasePath('/search/?q=' + encodeURIComponent(q)) : withBasePath('/search/');
     window.history.replaceState({}, '', next);
   }
 

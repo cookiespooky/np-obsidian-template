@@ -142,8 +142,10 @@
     var modal = document.querySelector("[data-search-modal]");
     var openBtn = document.querySelector("[data-search-open]");
     var closeBtns = document.querySelectorAll("[data-search-close]");
+    var form = modal ? modal.querySelector(".search-form") : null;
     var input = document.querySelector("[data-search-input]");
     var results = document.querySelector("[data-search-results]");
+    var allResultsLink = document.querySelector("[data-search-all]");
 
     if (!modal || !openBtn) return;
 
@@ -164,6 +166,17 @@
     function closeModal() {
       modal.classList.remove("is-open");
       modal.setAttribute("aria-hidden", "true");
+    }
+
+    function getSearchPageURL(q) {
+      var query = (q || "").trim();
+      return query ? withBasePath("/search/?q=" + encodeURIComponent(query)) : withBasePath("/search/");
+    }
+
+    function syncAllResultsLink() {
+      if (!allResultsLink) return;
+      var query = input ? input.value : "";
+      allResultsLink.setAttribute("href", getSearchPageURL(query));
     }
 
     function renderItems(items) {
@@ -230,12 +243,22 @@
 
     function initSearchLogic() {
       if (!input) return;
+      syncAllResultsLink();
       input.addEventListener("input", function () {
         var q = input.value.trim();
+        syncAllResultsLink();
         clearTimeout(timeout);
         timeout = setTimeout(function () {
           runSearch(q);
         }, 180);
+      });
+    }
+
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var query = input ? input.value : "";
+        window.location.href = getSearchPageURL(query);
       });
     }
 
