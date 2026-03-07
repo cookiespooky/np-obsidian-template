@@ -22,7 +22,7 @@ types:
     permalink: "/"
     include_in:
       sitemap: true
-      search: false
+      search: true
   page:
     template: "page.html"
     permalink: "/{{ slug }}/"
@@ -40,7 +40,7 @@ types:
     permalink: "/{{ slug }}/"
     include_in:
       sitemap: true
-      search: false
+      search: true
   search:
     template: "search.html"
     permalink: "/search/"
