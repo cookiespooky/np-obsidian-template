@@ -633,6 +633,7 @@ a:hover { text-decoration: underline; }
 .prose { line-height: 1.7; }
 .prose p { font-size: 16px; }
 .prose p { white-space: pre-line; }
+.prose br { display: none; }
 .prose ul,
 .prose ol,
 .prose li { font-size: 16px; }
@@ -655,6 +656,40 @@ a:hover { text-decoration: underline; }
   padding: 0.55em 0.75em;
   text-align: left;
   vertical-align: top;
+}
+
+.prose pre {
+  margin: 16px 0;
+  padding: 14px 16px;
+  overflow-x: auto;
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 10px;
+}
+
+.prose pre code {
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text-normal);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  white-space: pre;
+}
+
+.prose :not(pre) > code {
+  display: inline;
+  padding: 0.1em 0.45em;
+  margin: 0;
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  color: var(--text-normal);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.9em;
 }
 
 .prose thead th {
@@ -1034,40 +1069,4 @@ body.nav-open {
   border-radius: 8px;
   border: none;
   background: transparent;
-}
-
-/* Flat style overrides */
-:root {
-  --radius: 0px;
-}
-
-img,
-.hero img,
-.prose img,
-.home-prose img,
-.hub-prose img {
-  width: auto;
-  max-width: none !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-}
-
-.home-button,
-.icon-button,
-.search-button,
-.search-link,
-.search-panel,
-.search-form input,
-.search-form button[type="submit"],
-.search-item-card,
-.card,
-.hub-pill,
-.prose .callout,
-.prose blockquote,
-.tag,
-.footer-telegram,
-.footer-github,
-.footer-vcru {
-  border-radius: 0 !important;
-  border: 0 !important;
 }
