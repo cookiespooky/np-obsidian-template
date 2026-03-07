@@ -1,0 +1,21 @@
+.DS_Store
+
+# Build outputs
+dist/
+artifacts/
+.notepub/
+notepub/.notepub/
+
+# Local binaries and caches
+notepub/bin/
+*.log
+
+# Optional local env
+.env
+.env.*
+
+# Editor/system
+.idea/
+.vscode/
+.obsidian/
+*.swp
