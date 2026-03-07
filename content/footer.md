@@ -5,12 +5,17 @@ title: Футер
 description: Единый футер сайта
 noindex: true
 ---
+## Обратная связь
 
-## Call to Action
-**Есть идея, задача или хаотичный процесс?**
-Разберемся и соберем работающую систему. [Написать в Telegram](https://t.me/cookiespooky)
+По вопросам работы шаблона, а также
 
-## Контакты и ссылки
-- [Telegram-канал](https://t.me/thefoundersway)
-- [VC.ru](https://vc.ru/id1138692)
-- [GitHub](https://github.com/cookiespooky)
+- настройки структуры
+- кастомизации внешнего вида
+- автоматизаций
+
+→ **[Связаться с автором](https://t.me/cookiespooky)**
+
+Сайт сделан из Obsidian с помощью Notepub
+
+Автор - Anton Lozhkin
+[GitHub](https://github.com/cookiespooky) • [Threads](https://www.threads.com/@antoniospoony?igshid=NTc4MTIwNjQ2YQ==) • [Telegram](https://t.me/thefoundersway)

@@ -10,7 +10,8 @@
 ## Структура
 
 - `.github/` — CI/CD (сборка и деплой на Pages)
-- `content/` — заметки и медиа для Obsidian
+- `content/` — заметки для Obsidian
+- `media/` — картинки, видео (можно хранить прямо в `content/`)
 - `.np/` — вся техничка Notepub (config, rules, theme, scripts)
 
 ## Быстрый старт
