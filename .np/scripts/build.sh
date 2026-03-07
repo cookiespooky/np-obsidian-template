@@ -8,7 +8,7 @@ BIN="${NOTEPUB_BIN:-notepub}"
 CFG="${NOTEPUB_CONFIG:-./.np/config.yaml}"
 RULES="${NOTEPUB_RULES:-./.np/rules.yaml}"
 ART="./.notepub/artifacts"
-OUT="./dist"
+OUT="./.np/dist"
 CONTENT_DIR="./content"
 
 if [[ -z "${NOTEPUB_BIN:-}" && -x "./.np/bin/notepub" ]]; then

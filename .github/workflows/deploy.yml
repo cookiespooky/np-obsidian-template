@@ -173,14 +173,14 @@ jobs:
       - name: Export content media for static hosting
         if: steps.source.outputs.content_source != 's3'
         run: |
-          rm -rf ./dist/media
-          mkdir -p ./dist/media
+          rm -rf ./.np/dist/media
+          mkdir -p ./.np/dist/media
           rsync -a --prune-empty-dirs \
             --exclude '.git/' \
             --exclude '.github/' \
             --exclude '.obsidian/' \
             --exclude '*.md' \
-            ./content/ ./dist/media/
+            ./content/ ./.np/dist/media/
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
@@ -188,7 +188,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./.np/dist
 
   deploy:
     needs: build

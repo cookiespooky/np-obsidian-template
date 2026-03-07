@@ -31,7 +31,7 @@
 NOTEPUB_BIN=/path/to/notepub ./.np/scripts/build.sh
 ```
 
-Результат сборки: `dist/`.
+Результат сборки: `.np/dist/`.
 
 ## Где что настраивается
 

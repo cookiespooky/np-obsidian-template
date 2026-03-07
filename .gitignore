@@ -4,6 +4,7 @@
 dist/
 artifacts/
 .notepub/
+.np/dist/
 
 # Local binaries and caches
 .np/bin/
