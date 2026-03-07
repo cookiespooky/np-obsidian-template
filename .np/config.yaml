@@ -1,10 +1,10 @@
 site:
-  id: default
+  id: np-obsidian-template
   base_url: "http://127.0.0.1:8080/" # must end with /
   media_base_url: "http://127.0.0.1:8080/media/" # must end with /
-  title: "Антон Ложкин"
-  description: "Личный портал"
-  default_og_image: "/assets/main.webp"
+  title: "My Obsidian Site"
+  description: "Сайт из заметок Obsidian на шаблоне Notepub."
+  default_og_image: "/assets/notepub.svg"
 content:
   source: "local"
   local_dir: "../content"

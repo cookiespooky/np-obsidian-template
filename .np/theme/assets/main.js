@@ -39,6 +39,32 @@
     });
   }
 
+  function isVideoAsset(path) {
+    return /\.(mp4|webm|ogg|ogv|mov|m4v)(?:[\?#].*)?$/i.test(path || "");
+  }
+
+  function normalizeVideoEmbeds(scope) {
+    var root = scope || document;
+    var imgs = root.querySelectorAll(".prose img[src]");
+    imgs.forEach(function (img) {
+      var src = img.getAttribute("src") || "";
+      if (!isVideoAsset(src)) return;
+
+      var video = document.createElement("video");
+      video.src = src;
+      video.controls = true;
+      video.preload = "metadata";
+      video.className = "prose-video";
+
+      var alt = img.getAttribute("alt");
+      if (alt) video.setAttribute("aria-label", alt);
+      var title = img.getAttribute("title");
+      if (title) video.setAttribute("title", title);
+
+      img.replaceWith(video);
+    });
+  }
+
   function markExternalLinks(scope) {
     var root = scope || document;
     var links = root.querySelectorAll(".prose a[href]");
@@ -383,6 +409,7 @@
   }
 
   normalizeRootRelativeUrls(document);
+  normalizeVideoEmbeds(document.querySelector("main") || document);
   initMarkdownEmbeds(document.querySelector("main") || document);
   initSearchModal();
   initHubFilters();
