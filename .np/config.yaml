@@ -9,16 +9,16 @@ content:
   source: "local"
   local_dir: "../content"
 paths:
-  file_root: ./notepub/.notepub
-  artifacts_dir: ./notepub/.notepub/artifacts
-  snapshot_file: ./notepub/.notepub/snapshot/objects.json
-  cache_root: ./notepub/.notepub/cache
+  file_root: ./.notepub
+  artifacts_dir: ./.notepub/artifacts
+  snapshot_file: ./.notepub/snapshot/objects.json
+  cache_root: ./.notepub/cache
 theme:
-  dir: "./notepub"
+  dir: "./.np"
   name: "theme"
   templates_subdir: "templates"
   assets_subdir: "assets"
-rules_path: "./notepub/rules.yaml"
+rules_path: "./.np/rules.yaml"
 server:
   listen: "127.0.0.1:8080"
 cache:

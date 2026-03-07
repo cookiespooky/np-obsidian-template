@@ -5,14 +5,14 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$ROOT"
 
 BIN="${NOTEPUB_BIN:-notepub}"
-CFG="${NOTEPUB_CONFIG:-./notepub/config.yaml}"
-RULES="${NOTEPUB_RULES:-./notepub/rules.yaml}"
-ART="./notepub/.notepub/artifacts"
+CFG="${NOTEPUB_CONFIG:-./.np/config.yaml}"
+RULES="${NOTEPUB_RULES:-./.np/rules.yaml}"
+ART="./.notepub/artifacts"
 OUT="./dist"
 CONTENT_DIR="./content"
 
-if [[ -z "${NOTEPUB_BIN:-}" && -x "./notepub/bin/notepub" ]]; then
-  BIN="./notepub/bin/notepub"
+if [[ -z "${NOTEPUB_BIN:-}" && -x "./.np/bin/notepub" ]]; then
+  BIN="./.np/bin/notepub"
 fi
 
 BASE_URL="$(awk -F'"' '/base_url:/ {print $2; exit}' "$CFG")"
@@ -25,10 +25,10 @@ if ! command -v "$BIN" >/dev/null 2>&1; then
   exit 1
 fi
 
-if [[ -d "$CONTENT_DIR" && -f "./notepub/scripts/normalize-obsidian-embeds.sh" ]]; then
+if [[ -d "$CONTENT_DIR" && -f "./.np/scripts/normalize-obsidian-embeds.sh" ]]; then
   echo "[0/5] normalize obsidian embeds"
-  chmod +x ./notepub/scripts/normalize-obsidian-embeds.sh
-  ./notepub/scripts/normalize-obsidian-embeds.sh "$CONTENT_DIR"
+  chmod +x ./.np/scripts/normalize-obsidian-embeds.sh
+  ./.np/scripts/normalize-obsidian-embeds.sh "$CONTENT_DIR"
 fi
 
 echo "[1/5] index/build"

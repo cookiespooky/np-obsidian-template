@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NOTEPUB_VERSION: v0.1.3
-      NOTEPUB_BIN: ./notepub/bin/notepub
+      NOTEPUB_BIN: ./.np/bin/notepub
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -125,28 +125,28 @@ jobs:
             }
             skip && /^[A-Za-z_][A-Za-z0-9_]*:/ { skip=0 }
             !skip { print }
-          ' ./notepub/config.yaml > ./notepub/config.effective.yaml
+          ' ./.np/config.yaml > ./.np/config.effective.yaml
 
       - name: Set effective build config
         id: buildcfg
         run: |
           if [ "${{ steps.source.outputs.content_source }}" = "s3" ]; then
-            echo "path=./notepub/config.effective.yaml" >> "$GITHUB_OUTPUT"
+            echo "path=./.np/config.effective.yaml" >> "$GITHUB_OUTPUT"
           else
-            echo "path=./notepub/config.yaml" >> "$GITHUB_OUTPUT"
+            echo "path=./.np/config.yaml" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Normalize Obsidian embeds and hub wikilinks
         if: steps.source.outputs.content_source != 's3'
         run: |
-          chmod +x ./notepub/scripts/normalize-obsidian-embeds.sh
-          ./notepub/scripts/normalize-obsidian-embeds.sh ./content
+          chmod +x ./.np/scripts/normalize-obsidian-embeds.sh
+          ./.np/scripts/normalize-obsidian-embeds.sh ./content
 
       - name: Download notepub binary
         run: |
-          mkdir -p ./notepub/bin
-          curl -L -o ./notepub/bin/notepub "https://github.com/cookiespooky/notepub/releases/download/${NOTEPUB_VERSION}/notepub_linux_amd64"
-          chmod +x ./notepub/bin/notepub
+          mkdir -p ./.np/bin
+          curl -L -o ./.np/bin/notepub "https://github.com/cookiespooky/notepub/releases/download/${NOTEPUB_VERSION}/notepub_linux_amd64"
+          chmod +x ./.np/bin/notepub
 
       - name: Prepare base_url for GitHub Pages
         env:
@@ -159,7 +159,7 @@ jobs:
           else
             BASE_URL="https://${OWNER}.github.io/${REPO}/"
           fi
-          CFG="${BUILD_CONFIG:-./notepub/config.yaml}"
+          CFG="${BUILD_CONFIG:-./.np/config.yaml}"
           MEDIA_BASE_URL="${BASE_URL}media/"
           echo "Using BASE_URL=$BASE_URL in $CFG"
           sed -i "s|base_url: \".*\"|base_url: \"${BASE_URL}\"|" "$CFG"
@@ -168,7 +168,7 @@ jobs:
       - name: Build site
         env:
           NOTEPUB_CONFIG: ${{ steps.buildcfg.outputs.path }}
-        run: ./notepub/scripts/build.sh
+        run: ./.np/scripts/build.sh
 
       - name: Export content media for static hosting
         if: steps.source.outputs.content_source != 's3'

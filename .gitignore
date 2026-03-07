@@ -4,10 +4,9 @@
 dist/
 artifacts/
 .notepub/
-notepub/.notepub/
 
 # Local binaries and caches
-notepub/bin/
+.np/bin/
 *.log
 
 # Optional local env

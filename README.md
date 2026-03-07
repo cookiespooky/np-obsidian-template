@@ -11,7 +11,7 @@
 
 - `.github/` — CI/CD (сборка и деплой на Pages)
 - `content/` — заметки и медиа для Obsidian
-- `notepub/` — вся техничка Notepub (config, rules, theme, scripts)
+- `.np/` — вся техничка Notepub (config, rules, theme, scripts)
 
 ## Быстрый старт
 
@@ -22,26 +22,26 @@
 ## Локальная сборка (опционально)
 
 ```bash
-./notepub/scripts/build.sh
+./.np/scripts/build.sh
 ```
 
-Если бинарника `notepub/bin/notepub` нет, укажите путь:
+Если бинарника `.np/bin/notepub` нет, укажите путь:
 
 ```bash
-NOTEPUB_BIN=/path/to/notepub ./notepub/scripts/build.sh
+NOTEPUB_BIN=/path/to/notepub ./.np/scripts/build.sh
 ```
 
 Результат сборки: `dist/`.
 
 ## Где что настраивается
 
-- сайт: `notepub/config.yaml`
-- правила роутинга/коллекций: `notepub/rules.yaml`
-- шаблоны и стили: `notepub/theme/`
+- сайт: `.np/config.yaml`
+- правила роутинга/коллекций: `.np/rules.yaml`
+- шаблоны и стили: `.np/theme/`
 - workflow: `.github/workflows/deploy.yml`
 
 ## Важно
 
 - Контент для пользователя хранится только в `content/`.
-- Технические файлы изолированы в `notepub/`.
+- Технические файлы изолированы в `.np/`.
 - Workflow автоматически ставит корректный `base_url` для GitHub Pages.
