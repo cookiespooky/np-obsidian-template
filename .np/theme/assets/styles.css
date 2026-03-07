@@ -217,6 +217,13 @@ a:hover { text-decoration: underline; }
 
 .search-results { margin-top: 16px; }
 
+.search-all {
+  display: inline-flex;
+  margin-top: 12px;
+  color: var(--link);
+  font-size: 14px;
+}
+
 .search-results ul {
   list-style: none;
   margin: 0;
@@ -756,15 +763,6 @@ a:hover { text-decoration: underline; }
   font-size: 16px;
 }
 
-.home-prose h1 {
-  font-size: 1.5em;
-  line-height: 1.4;
-}
-
-.home-prose h2 {
-  margin-top: 50px;
-}
-
 .hub-prose h1 {
   font-size: 1.5em;
 }
@@ -845,12 +843,12 @@ img {
   margin: 0 0 28px;
 }
 
-.footer-inner { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; font-size: 14px; }
 .footer-inner { justify-content: flex-start; }
 .footer-prose { width: 100%; }
 .footer-prose h2 { margin-top: 0; }
 .footer-prose p,
-.footer-prose li { font-size: 16px; }
+.footer-prose li { font-size: 14px; }
 .footer-prose ul { margin: 0.6em 0 0; padding-left: 20px; }
 .footer-prose a { color: var(--link); }
 
