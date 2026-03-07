@@ -15,6 +15,30 @@
     window.setTimeout(fn, 350);
   }
 
+  function isRootRelative(url) {
+    return !!url && url.charAt(0) === "/" && url.indexOf("//") !== 0;
+  }
+
+  function normalizeRootRelativeUrls(scope) {
+    var root = scope || document;
+    var attrs = [
+      { selector: "a[href]", attr: "href" },
+      { selector: "img[src]", attr: "src" },
+      { selector: "video[src]", attr: "src" },
+      { selector: "audio[src]", attr: "src" },
+      { selector: "source[src]", attr: "src" }
+    ];
+
+    attrs.forEach(function (item) {
+      var nodes = root.querySelectorAll(item.selector);
+      nodes.forEach(function (node) {
+        var value = node.getAttribute(item.attr) || "";
+        if (!isRootRelative(value)) return;
+        node.setAttribute(item.attr, withBasePath(value));
+      });
+    });
+  }
+
   function markExternalLinks(scope) {
     var root = scope || document;
     var links = root.querySelectorAll(".prose a[href]");
@@ -358,6 +382,7 @@
     });
   }
 
+  normalizeRootRelativeUrls(document);
   initMarkdownEmbeds(document.querySelector("main") || document);
   initSearchModal();
   initHubFilters();
