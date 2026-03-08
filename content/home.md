@@ -31,6 +31,7 @@ image: /media/notepub.jpg
 
 ![Notepub-demo](demo.mp4)
 
+---
 ## Свой сайт из Obsidian за 10 минут
 
 Шаблон бесплатный.  
@@ -46,7 +47,6 @@ image: /media/notepub.jpg
 **[[instructions|→ Инструкция со скриншотами]]**
 
 ---
-
 ## Почему Notepub вместо Obsidian Publish
 
 **Notepub:**
