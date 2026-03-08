@@ -14,7 +14,7 @@ description: Подробная инструкция со скриншотами
 
 ## Шаг 1. Скопировать шаблон
 
-Перейти на [страницу шаблона](https://github.com/np-obsidian-template) и нажать **Use this template → Create a new repository**:
+Перейти на [страницу шаблона](https://github.com/cookiespooky/np-obsidian-template) и нажать **Use this template → Create a new repository**:
 ![github notepub obsidian template](template.webp)
 В созданном репозитории нужно перейти в **Settings → Pages → Build and deployment** и выбрать **GitHub Actions**:
 ![github-pages](pages.webp)
@@ -39,6 +39,8 @@ description: Подробная инструкция со скриншотами
 
 >**Внимание: Git плагин не работает в iOS по умолчанию.**
 >Для работы с плагином используйте Obsidian на компьютере.
+
+Возникли вопросы с настройкой → **[Связаться с автором](https://t.me/cookiespooky)**
 
 ---
 ## Структура хранилища
@@ -82,3 +84,16 @@ media/
 [→ **Сайт Notepub и документация**](https://cookiespooky.github.io/np/ru)
 
 [→ **GitHub проекта**](https://github.com/cookiespooky/notepub)
+
+---
+## Обратная связь
+
+По вопросам работы шаблона, а также
+
+- настройки структуры
+- кастомизации внешнего вида
+- автоматизаций
+
+→ **[Связаться с автором](https://t.me/cookiespooky)**
+
+[[home|Главная]]
