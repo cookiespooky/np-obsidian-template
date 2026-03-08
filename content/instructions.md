@@ -17,26 +17,27 @@ description: Подробная инструкция со скриншотами
 Перейти на [страницу шаблона](https://github.com/np-obsidian-template) и нажать Use this template → Create a new repository:
 ![github notepub obsidian template](template.webp)
 В созданном репозитории нужно перейти в Settings → Pages → Build and deployment и выбрать **GitHub Actions**:
-![github-pages](media/pages.webp)
+![github-pages](pages.webp)
 ## Шаг 2. Перенести на свой компьютер
 
 Самый простой способ — с помощью приложения [GitHub Desktop](https://desktop.github.com/download/).
 Найти созданный репозиторий и клонировать его:
-![git-desktop](media/git-desktop.webp)
+![git-desktop](git-desktop.webp)
 Или через терминал: `git clone https://github.com/owner/repository /путь_к_папке_на_вашем_компьютере`, где `owner` - ваш логин в GitHub, а `repository` - название созданного репозитория
 
 ## Шаг 3. Открыть папку как хранилище в Obsidian  
 
 По умолчанию тексты лежат в папке `content/`, а медиафайлы в папке `/media`. Все редактируется в Obsidian. В начале каждой заметки есть небольшая шапка с настройками страницы, [[frontmatter|читайте подробнее]].
-![vault](media/vault.webp)
+![vault](vault.webp)
 ## Шаг 4. Настроить публикацию
 
 Установить Git плагин из Community plugins (Настройки → Сторонние плагины → Включить плагины сообщества → Обзор → Ввести в поиске "Git" → Установить → Включить). Другие настройки плагина не требуются.
 
 После установки появится иконка, которая открывает панель плагина. Теперь просто нажмите Commit & sync, и GitHub автоматически соберёт и обновит сайт. Публикация занимает около минуты. Процесс можно наблюдать во вкладке Actions вашего репозитория.
-![git](media/git.webp)
+![git](git.webp)
 >Внимание: Git плагин не работает в iOS по умолчанию. Для работы с плагином используйте Obsidian на компьютере.
 
+---
 ## Структура хранилища
 
 Структура этого сайта:
