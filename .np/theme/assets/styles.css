@@ -809,6 +809,7 @@ img {
   max-width: 100%;
   width: 100%;
   height: auto;
+  border-radius: 6px;
 }
 
 .meta-row { display: flex; gap: 16px; align-items: center; margin-bottom: 2em; }
