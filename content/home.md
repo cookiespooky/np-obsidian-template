@@ -3,7 +3,7 @@ type: home
 slug: home
 title: Сайт из Obsidian
 description: Без хостинга, сервера, баз данных, CMS и админок. SEO настроено по умолчанию.
-image: /media/notepub.svg
+image: /media/notepub.jpg
 ---
 ![[/media/obsidian.webp]]
 # Этот сайт сделан из Obsidian
@@ -27,11 +27,10 @@ image: /media/notepub.svg
 2. Делаете push через Git plugin
 3. Notepub собирает сайт
 
-Как заметка превращается в страницу сайта:
+**Как заметка превращается в страницу сайта:**
 
 ![Notepub-demo](/media/demo.mp4)
 
----
 ## Свой сайт из Obsidian за 10 минут
 
 Шаблон бесплатный.  
@@ -50,8 +49,7 @@ image: /media/notepub.svg
 
 ## Почему Notepub вместо Obsidian Publish
 
-Notepub:  
-  
+**Notepub:**
 - бесплатный  
 - open source  
 - полный контроль  
