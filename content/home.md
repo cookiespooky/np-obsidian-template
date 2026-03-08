@@ -42,7 +42,7 @@ image: /media/notepub.jpg
 2. Открыть в Obsidian и изменить тексты
 3. Опубликовать через Git plugin
 
-[**→ Шаблон**](https://github.com/np-obsidian-template)
+[**→ Шаблон**](https://github.com/cookiespooky/np-obsidian-template)
 
 **[[instructions|→ Инструкция со скриншотами]]**
 
