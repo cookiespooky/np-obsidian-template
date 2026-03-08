@@ -809,6 +809,7 @@ img {
   max-width: 100%;
   width: 100%;
   height: auto;
+  border: 1px solid var(--background-modifier-border);
   border-radius: 6px;
 }
 

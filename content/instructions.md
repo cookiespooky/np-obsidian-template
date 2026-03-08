@@ -8,7 +8,7 @@ description: Подробная инструкция со скриншотами
 
 >Ничего программировать не придется
 
-Этот шаблон бесплатный. Настраивается 1 раз, публикуется в 1 клик.
+Этот шаблон бесплатный. Настраивается 1 раз, после этого публикуется в 1 клик.
 
 Ваш сайт по умолчанию запускается на GitHub Pages - бесплатном хостинге сайтов от GitHub. К сайту на GitHub Pages можно подключить свой домен и настроить любой внешний вид.
 
@@ -50,15 +50,19 @@ description: Подробная инструкция со скриншотами
 ```shell
 # Не отображаются в Obsidian
 .github/workflows
-	deploy.yml
 .np/
 
 # Отображаются в Obsidian
 content/
-	about.md  
-	projects.md  
+	footer.md
+	frontmatter.md
+	home.md
+	instructions.md  
+	search.md
+	why-notepub.md
 	blog/  
 		first-post.md
+		second-post.md
 media/
 	demo.mp4
 	notepub.svg
