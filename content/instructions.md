@@ -17,7 +17,7 @@ description: Подробная инструкция со скриншотами
 Перейти на [страницу шаблона](https://github.com/np-obsidian-template) и нажать Use this template → Create a new repository:
 ![github notepub obsidian template](template.webp)
 В созданном репозитории нужно перейти в Settings → Pages → Build and deployment и выбрать **GitHub Actions**:
-![[github-pages](media/pages.webp)
+![github-pages](media/pages.webp)
 ## Шаг 2. Перенести на свой компьютер
 
 Самый простой способ — с помощью приложения [GitHub Desktop](https://desktop.github.com/download/).
