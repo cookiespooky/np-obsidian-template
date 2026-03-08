@@ -33,3 +33,7 @@ image: /media/image.jpg
 В Obsidian такие свойства называются **frontmatter**.  
   
 В шаблоне всё уже настроено — можно просто копировать существующие страницы.
+
+→ [[home|Главная]]
+→ [[instructions|Инструкции]]
+→ [[why-notepub|Почему Notepub]]

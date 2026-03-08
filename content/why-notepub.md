@@ -4,6 +4,7 @@ slug: why-notepub
 title: Почему Notepub
 description: Чем Notepub отличается от других способов публиковать Obsidian
 ---
+![notepub](notepub.jpg)
 # Почему Notepub
 
 Есть несколько способов публиковать заметки из Obsidian.

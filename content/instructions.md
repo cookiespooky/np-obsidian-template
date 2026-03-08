@@ -96,4 +96,6 @@ media/
 
 → **[Связаться с автором](https://t.me/cookiespooky)**
 
-[[home|Главная]]
+→ [[home|Главная]]
+→ [[frontmatter|Настройки страниц]]
+→ [[why-notepub|Почему Notepub]]
