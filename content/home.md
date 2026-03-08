@@ -57,6 +57,8 @@ image: /media/notepub.jpg
 - настраиваемый внешний вид сайта
 - Git workflow
 
+**[[why-notepub|→ Подробнее]]**
+
 ---
 ## Обратная связь
 
@@ -66,6 +68,6 @@ image: /media/notepub.jpg
 - кастомизации внешнего вида
 - автоматизаций
 
-→ **[Связаться с автором](https://t.me/cookiespooky)**
+**[→ Связаться с автором](https://t.me/cookiespooky)**
 
 
