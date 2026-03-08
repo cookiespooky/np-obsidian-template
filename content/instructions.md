@@ -83,6 +83,8 @@ media/
 - ссылки → навигация  
 - vault → сайт
 
+[[why-notepub|Почему Notepub]]
+
 Подробное техническое описание движка для разработчиков:
 
 [→ **Сайт Notepub и документация**](https://cookiespooky.github.io/np/ru)
