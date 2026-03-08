@@ -13,14 +13,14 @@ image:
 
 ```yaml
 ---
-type: article  
+type: article
 title: Моя первая статья  
 description: Короткое описание страницы  
 slug: first-post  
 image: /media/image.jpg  
 ---
 ```
-  
+
 После неё идёт обычный текст заметки.  
   
 Эта шапка нужна, чтобы сайт знал:  
@@ -28,7 +28,7 @@ image: /media/image.jpg
 - название страницы  
 - адрес страницы  
 - описание  
-- изображение  
+- изображение
   
 В Obsidian такие свойства называются **frontmatter**.  
   

@@ -5,7 +5,7 @@ title: Сайт из Obsidian
 description: Без хостинга, сервера, баз данных, CMS и админок. SEO настроено по умолчанию.
 image: /media/notepub.jpg
 ---
-![[/media/obsidian.webp]]
+![[obsidian.webp]]
 # Этот сайт сделан из Obsidian
 
 Все страницы — обычные заметки.  
@@ -29,7 +29,7 @@ image: /media/notepub.jpg
 
 **Как заметка превращается в страницу сайта:**
 
-![Notepub-demo](/media/demo.mp4)
+![Notepub-demo](demo.mp4)
 
 ## Свой сайт из Obsidian за 10 минут
 
