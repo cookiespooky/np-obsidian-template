@@ -5,7 +5,10 @@ title: Сайт из Obsidian
 description: Без конструкторов, подписок, хостинга и кода. SEO настроено по умолчанию.
 image: /media/notepub.jpg
 ---
-![obsidian](obsidian.webp)
+<figure>
+  <img src="obsidian.webp" alt="obsidian" />
+  <figcaption>Obsidian</figcaption>
+</figure>
 # Превратите Obsidian в полноценный сайт за 10 минут
 
 >Все страницы - обычные заметки
@@ -34,7 +37,10 @@ image: /media/notepub.jpg
 
 **Как публикуются заметки:**
 
-![Notepub-demo](demo.mp4)
+<figure>
+  <video controls preload="metadata" src="demo.mp4"></video>
+  <figcaption>Notepub-demo</figcaption>
+</figure>
 
 
 ## 🚫 Почему не конструкторы / CMS
@@ -55,5 +61,4 @@ image: /media/notepub.jpg
 - автоматизаций
 
 **[→ Связаться с автором](https://t.me/cookiespooky)**
-
 
