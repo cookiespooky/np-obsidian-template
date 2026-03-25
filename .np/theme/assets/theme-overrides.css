@@ -1,0 +1,38 @@
+/* Auto-generated. Edit theme.md in repository root. */
+/* Invalid values are skipped; defaults from styles.css remain active. */
+
+:root {
+  --font-family-base: "Inter", "Segoe UI", sans-serif;
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-soft: #f2f3f5;
+  --color-surface-alt: #f5f6f8;
+  --color-surface-deep: #e3e5e8;
+  --color-border: #dddddd;
+  --color-text: #2e3338;
+  --color-muted: #888888;
+  --color-link: #705dcf;
+  --color-accent: #7b6cd9;
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+  --color-danger: #990000;
+  --color-info: #2563eb;
+}
+
+.theme-dark {
+  --color-bg: #202020;
+  --color-surface: #202020;
+  --color-surface-soft: #161616;
+  --color-surface-alt: #1a1a1a;
+  --color-surface-deep: #000000;
+  --color-border: #333333;
+  --color-text: #dcddde;
+  --color-muted: #999999;
+  --color-link: #7f6df2;
+  --color-accent: #483699;
+  --color-success: #197300;
+  --color-warning: #d97706;
+  --color-danger: #3d0000;
+  --color-info: #2563eb;
+}
+

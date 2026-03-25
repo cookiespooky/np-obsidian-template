@@ -3,6 +3,7 @@ type: article
 slug: why-notepub
 title: Почему Notepub
 description: Чем Notepub отличается от других способов публиковать Obsidian
+image: /media/notepub.jpg
 ---
 ![notepub](notepub.jpg)
 # Почему Notepub

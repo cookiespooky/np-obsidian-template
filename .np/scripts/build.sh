@@ -32,11 +32,17 @@ if [[ -d "$CONTENT_DIR" && -f "./.np/scripts/normalize-obsidian-embeds.sh" ]]; t
   ./.np/scripts/normalize-obsidian-embeds.sh "$CONTENT_DIR"
 fi
 
-echo "[1/5] index/build"
+if [[ -f "./.np/scripts/generate-theme-overrides.sh" ]]; then
+  echo "[1/6] generate theme overrides"
+  chmod +x ./.np/scripts/generate-theme-overrides.sh
+  ./.np/scripts/generate-theme-overrides.sh
+fi
+
+echo "[2/6] index/build"
 "$BIN" index --config "$CFG" --rules "$RULES"
 "$BIN" build --config "$CFG" --rules "$RULES" --artifacts "$ART" --dist "$OUT"
 
-echo "[2/5] export content media"
+echo "[3/6] export content media"
 rm -rf "$OUT/media"
 mkdir -p "$OUT/media"
 
@@ -74,7 +80,7 @@ if [[ -d "$MEDIA_DIR" ]]; then
   fi
 fi
 
-echo "[3/5] copy llms files"
+echo "[4/6] copy llms files"
 if [[ -f "$OUT/assets/llms.txt" ]]; then
   cp "$OUT/assets/llms.txt" "$OUT/llms.txt"
 fi
@@ -82,11 +88,11 @@ if [[ -f "$OUT/assets/llms-full.txt" ]]; then
   cp "$OUT/assets/llms-full.txt" "$OUT/llms-full.txt"
 fi
 
-echo "[4/5] normalize robots"
+echo "[5/6] normalize robots"
 if [[ -f "$OUT/robots.txt" ]]; then
   awk '!/^LLM: /' "$OUT/robots.txt" > "$OUT/robots.txt.tmp"
   cat "$OUT/robots.txt.tmp" > "$OUT/robots.txt"
   rm -f "$OUT/robots.txt.tmp"
 fi
 
-echo "[5/5] done -> $OUT"
+echo "[6/6] done -> $OUT"

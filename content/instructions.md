@@ -3,6 +3,7 @@ type: article
 slug: instructions
 title: "Инструкция: сайт из Obsidian"
 description: Подробная инструкция со скриншотами
+image: /media/template.webp
 ---
 # Сайт из Obsidian за 10 минут - подробная инструкция
 
