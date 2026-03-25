@@ -1,21 +1,29 @@
-.DS_Store
+# Keep only site-related paths at repository root
+/*
 
-# Build outputs
-dist/
-artifacts/
-.notepub/
-.np/dist/
+!/.gitignore
+!/README.md
+!/.github/
+!/.github/**
+!/.np/
+!/.np/**
+!/content/
+!/content/**
+!/media/
+!/media/**
 
-# Local binaries and caches
-.np/bin/
+# Re-ignore local build outputs/caches inside allowed directories
+/.notepub/
+/.np/.notepub/
+/.np/dist/
+/.np/bin/
+
+# Editor/system noise
+**/.DS_Store
 *.log
-
-# Optional local env
-.env
-.env.*
-
-# Editor/system
+*.swp
 .idea/
 .vscode/
 .obsidian/
-*.swp
+.env
+.env.*
